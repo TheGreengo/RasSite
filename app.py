@@ -18,7 +18,11 @@ def add():
     return render_template('main.html', todos=todos)
 
 @app.route('/remove/<id>', methods=['POST'])
-def remove():
+def remove(id):
+    for i in range(len(todos)):
+        if str(todos[i]["id"]) == id:
+            del todos[i]
+            break
     return render_template('main.html', todos=todos)
 
 @app.route('/clear', methods=['POST'])
