@@ -1,1 +1,2 @@
 # RasSite
+Just a simple webpage to run as a test on my raspberry pi. The goal is to serve a little checklist app (using flask) on my raspberry pi and see if I can go to that website on another computer on the same network.
