@@ -8,24 +8,22 @@
     </head>
     <body>
         <h1 class="top">Welcome to Ras Site Todos!</h1>
-        <div>
+        <div class="hold">
             {% if todos == [] %}
             <div>
-                Empty
+                No todos to display. 
+                Feel free to add some below!
             </div>
             {% else %}
-            <div>
-                Not
-            </div>
+            {% for task in todos %}
+            {{task["desc"]}}
+            {% endfor %}
             {% endif %}
             <div>
-                <form>
-                    <label></label>
-                    <input/>
-                    <label></label>
-                    <input/>
-                    <label></label>
-                    <input/>
+                <form action="http://127.0.0.1:8000/add" method = "post">
+                    <label>Task name: </label>
+                    <input id="desc" name="desc"/>
+                    <input type="submit" id="Add" value="Add"/>
                 </form>
             </div>
         </div>

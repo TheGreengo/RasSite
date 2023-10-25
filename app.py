@@ -1,4 +1,5 @@
 from flask import Flask, redirect, url_for, request, render_template
+import numpy as np
 
 app = Flask(__name__)
 
@@ -10,6 +11,10 @@ def index():
 
 @app.route('/add', methods=['POST'])
 def add():
+    desc = request.form.get("desc")
+    id = np.random.randint(2000000000)
+    todos.append({ "desc": desc, "id": id})
+    print(todos)
     return render_template('main.html', todos=todos)
 
 @app.route('/remove', methods=['DELETE'])

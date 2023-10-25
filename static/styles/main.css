@@ -6,3 +6,9 @@
     text-align: center;
     font-weight: normal;
 }
+
+.hold {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
