@@ -18,7 +18,7 @@ def add():
     return render_template('main.html', todos=todos)
 
 @app.route('/remove/<id>', methods=['POST'])
-def add():
+def remove():
     return render_template('main.html', todos=todos)
 
 @app.route('/clear', methods=['POST'])
