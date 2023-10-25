@@ -16,17 +16,22 @@
             </div>
             {% else %}
             {% for task in todos %}
-            {{task["desc"]}}
+            <form  action="http://127.0.0.1:8000/remove/{{task.id}}" method="post">
+                {{task["desc"]}}
+                <input type="submit" value="complete"/>
+            </form>
             {% endfor %}
             {% endif %}
             <div>
-                <form action="http://127.0.0.1:8000/add" method = "post">
+                <form action="http://127.0.0.1:8000/add" method="post">
                     <label>Task name: </label>
                     <input id="desc" name="desc"/>
                     <input type="submit" id="Add" value="Add"/>
                 </form>
             </div>
         </div>
-
+        <form action="http://127.0.0.1:8000/clear" method="post">
+            <input type="submit" id="clear" value="clear"/>
+        </form>
     </body>
 </html>

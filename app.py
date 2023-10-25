@@ -17,8 +17,13 @@ def add():
     print(todos)
     return render_template('main.html', todos=todos)
 
-@app.route('/remove', methods=['DELETE'])
-def remove():
+@app.route('/remove/<id>', methods=['POST'])
+def add():
+    return render_template('main.html', todos=todos)
+
+@app.route('/clear', methods=['POST'])
+def clear():
+    todos.clear()
     return render_template('main.html', todos=todos)
 
 if __name__ == "__main__":
