@@ -7,6 +7,28 @@
         <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static', filename='styles/main.css') }}">
     </head>
     <body>
-        Testing, testing, 1, 2, 3...
+        <h1 class="top">Welcome to Ras Site Todos!</h1>
+        <div>
+            {% if todos == [] %}
+            <div>
+                Empty
+            </div>
+            {% else %}
+            <div>
+                Not
+            </div>
+            {% endif %}
+            <div>
+                <form>
+                    <label></label>
+                    <input/>
+                    <label></label>
+                    <input/>
+                    <label></label>
+                    <input/>
+                </form>
+            </div>
+        </div>
+
     </body>
 </html>
